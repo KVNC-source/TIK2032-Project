@@ -5,7 +5,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Base styles */
 body {
   background-color: #f5f8f5;
   color: #333;
@@ -49,7 +48,6 @@ body.dark-mode .navbar {
   transition: all 0.3s ease;
 }
 
-/* Date specific styling */
 #date {
   font-size: 0.85rem;
   color: #ffffff;
@@ -61,7 +59,6 @@ body.dark-mode .navbar {
   text-align: center;
 }
 
-/* Time specific styling */
 #time {
   font-size: 0.95rem;
   color: #ffffff;
@@ -84,14 +81,12 @@ body.dark-mode .navbar {
   color: #f0f0f0;
 }
 
-/* Style for the time container */
 .time {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Additional responsive styling */
 @media (max-width: 768px) {
   .datetime-container {
     margin-right: 10px;
@@ -121,12 +116,10 @@ body.dark-mode .navbar {
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
 }
 
-/* Fixed button hover style conflict */
 button:hover {
-  background-color: #45a049 !important; /* Matches the button:hover style below */
+  background-color: #45a049 !important;
 }
 
-/* Headings */
 h1 {
   text-align: center;
   padding: 20px 0;
@@ -149,7 +142,7 @@ h1::after {
   margin: 10px auto 0;
 }
 
-/* Navigation */
+/* Nav */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -194,7 +187,7 @@ h1::after {
   text-decoration: none;
 }
 
-/* Content sections */
+/* Home section */
 .Welcome {
   background: linear-gradient(to bottom right, #223322, #1a2b1a);
   color: #fff;
@@ -215,7 +208,6 @@ h1::after {
   box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* Fixed redundant h1 in Welcome that wasn't in HTML */
 .Welcome p {
   line-height: 1.6;
   text-align: justify;
@@ -282,7 +274,7 @@ h1::after {
   text-align: justify;
 }
 
-/* Gallery items */
+/* Gallery page*/
 figure {
   display: block;
   margin: 30px auto;
@@ -295,15 +287,15 @@ figure {
 }
 
 .figure video {
-  width: 100%; /* Make video responsive to the figure's width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Smooth corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for video */
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .figure video:hover {
-  transform: scale(1.05); /* Slightly scale up the video on hover */
+  transform: scale(1.05);
 }
 
 figure img {
@@ -312,7 +304,7 @@ figure img {
   max-width: 400px;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  display: block; /* Prevents image gap */
+  display: block;
 }
 
 figure img:hover {
@@ -336,9 +328,9 @@ figcaption {
 }
 
 .blog ul {
-  list-style-type: none; /* Moved from li to ul */
-  padding: 0; /* Added padding reset */
-  margin: 0; /* Added margin reset */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .blog ul li {
@@ -347,7 +339,7 @@ figcaption {
   margin: 30px auto;
   border-radius: 8px;
   box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
-  width: 100%; /* Changed from 80% to prevent double margin issues */
+  width: 100%;
   font-size: 1.1em;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -359,14 +351,13 @@ figcaption {
 
 .blog h2 {
   margin-bottom: 20px;
-  color: #8bc34a; /* Added color to match other headings */
+  color: #8bc34a;
 }
 
 .blog ul li:last-child {
   border-bottom: none;
 }
 
-/* Added style for links in blog */
 .blog a {
   color: #8bc34a;
   text-decoration: none;
@@ -378,7 +369,7 @@ figcaption {
   text-decoration: underline;
 }
 
-/* Social links */
+/*Contact page*/
 .links {
   display: flex;
   justify-content: center;
@@ -407,7 +398,6 @@ figcaption {
   transform: scale(1.2);
 }
 
-/* Contact form */
 .contact-form {
   width: 80%;
   max-width: 600px;
@@ -428,8 +418,8 @@ figcaption {
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #f5f8f5; /* Added to ensure visibility in dark mode */
-  color: #333; /* Added to ensure visibility in dark mode */
+  background-color: #f5f8f5;
+  color: #333;
 }
 
 .dark-mode .contact-form input,
@@ -461,94 +451,6 @@ figcaption {
 .contact-form button:hover {
   background-color: #45a049;
   transform: translateY(-2px);
-}
-
-/* New styles to enhance the page */
-.profile-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #4caf50;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.profile-image:hover {
-  transform: scale(1.05);
-  border-color: #8bc34a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.skill-tag {
-  background-color: rgba(139, 195, 74, 0.2);
-  color: #fff;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(139, 195, 74, 0.4);
-}
-
-.skill-tag:hover {
-  background-color: rgba(139, 195, 74, 0.4);
-  transform: translateY(-3px);
-}
-
-/* Added footer */
-.footer {
-  background-color: #1a2e14;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  margin-top: auto; /* Push footer to bottom */
-}
-
-.footer p {
-  margin: 10px 0;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 15px 0;
-}
-
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #27391c;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  background-color: #4caf50;
-  transform: translateY(-3px);
-}
-
-.social-icons img {
-  width: 20px;
-  height: 20px;
 }
 
 a:focus,
