@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      rel="stylesheet"
+      href="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/style/style.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="index.html">home</a>
+        <a href="gallery.html">gallery</a>
+        <a href="blog.html">blog</a>
+        <a href="contact.html">contact</a>
+      </div>
+
+      <div class="time">
+        <div class="datetime-container">
+          <p id="date"></p>
+          <p id="time"></p>
+        </div>
+        <div class="dark-toggle">
+          <a onclick="toggleDarkMode()" style="cursor: pointer">
+            <img
+              src="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/asset/moon_5758839.png"
+              alt="Toggle Dark Mode"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <h1>BLOG PAGE</h1>
+    <div class="blog">
+      <ul>
+        <li>
+          <h2>The Importance of Recycling Plastic</h2>
+          <p>
+            Artikel ini membahas dampak buruk sampah plastik terhadap lingkungan
+            dan pentingnya mendaur ulang plastik. PSampah plastik merupakan
+            salah satu masalah lingkungan yang paling besar karena plastik
+            membutuhkan waktu ratusan tahun untuk terurai. Sampah plastik yang
+            dibuang sembarangan dapat mencemari tanah, air, dan laut, yang
+            berdampak negatif terhadap ekosistem. Mengurangi jumlah plastik yang
+            dibuang dengan mendaur ulang plastik menjadi solusi penting. Daur
+            ulang plastik menghemat energi yang digunakan untuk memproduksi
+            plastik baru dan mengurangi penggunaan sumber daya alam yang
+            terbatas. Proses ini juga membantu mengurangi polusi plastik di
+            lautan, yang sangat membahayakan kehidupan laut.
+          </p>
+          <p>Referensi:</p>
+          <a
+            href="https://www.nationalgeographic.com/environment/article/plastic-pollution"
+            target="_blank"
+            >National Geographic - Plastic Pollution</a
+          >
+        </li>
+
+        <li>
+          <h2>How to Start a Sustainable Garden at Home</h2>
+          <p>
+            Memulai taman yang ramah lingkungan di rumah bisa menjadi langkah
+            yang baik untuk mengurangi jejak karbon dan menghasilkan makanan
+            segar secara mandiri. Salah satu langkah pertama adalah dengan
+            memilih tanaman lokal yang lebih mudah tumbuh dan tidak membutuhkan
+            banyak air. Selain itu, penggunaan kompos dari limbah organik
+            membantu mengurangi sampah dan menyediakan nutrisi alami bagi
+            tanaman. Menggunakan metode irigasi yang efisien juga sangat penting
+            untuk menghemat air, yang menjadi sumber daya yang semakin terbatas.
+            Berkebun secara berkelanjutan mendukung keberagaman hayati dan
+            memberikan manfaat positif bagi lingkungan sekitar.
+          </p>
+          <p>Referensi:</p>
+          <a href="https://www.thespruce.com/gardening-4127780" target="_blank"
+            >The Spruce</a
+          >
+        </li>
+
+        <li>
+          <h2>How to Start a Sustainable Garden at Home</h2>
+          <p>
+            Kendaraan listrik (EV) semakin menjadi pilihan utama dalam upaya
+            mengurangi dampak negatif terhadap lingkungan. Berbeda dengan
+            kendaraan berbahan bakar fosil, kendaraan listrik tidak menghasilkan
+            emisi gas buang seperti karbon dioksida (CO2), nitrogen oksida
+            (NOx), atau partikulat berbahaya yang biasa dihasilkan oleh
+            kendaraan bensin atau diesel. Oleh karena itu, EV dapat membantu
+            mengurangi polusi udara di kota-kota besar dan mengurangi dampak
+            perubahan iklim yang disebabkan oleh emisi gas rumah kaca. Seiring
+            dengan kemajuan teknologi, kendaraan listrik semakin terjangkau,
+            dengan banyak produsen mobil yang mengembangkan berbagai jenis
+            kendaraan listrik untuk memenuhi berbagai kebutuhan konsumen. Selain
+            itu, infrastruktur pengisian daya EV juga semakin berkembang,
+            menjadikannya lebih mudah diakses oleh lebih banyak orang.
+          </p>
+          <p>Referensi:</p>
+          <a
+            href="https://www.iea.org/energy-system/transport/electric-vehicles"
+            target="_blank"
+          >
+            Electric Vehicles</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      // Check saved mode on page load
+      window.onload = function () {
+        if (localStorage.getItem("darkMode") === "enabled") {
+          document.body.classList.add("dark-mode");
+        }
+      };
+
+      // Toggle dark mode and save the setting
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("darkMode", "enabled");
+        } else {
+          localStorage.removeItem("darkMode");
+        }
+      }
+    </script>
+
+    <script>
+      function updateDateTime() {
+        const now = new Date();
+
+        // Format and update date
+        const dateOptions = {
+          weekday: "short",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        };
+        document.getElementById("date").textContent = now.toLocaleString(
+          "en-US",
+          dateOptions
+        );
+
+        // Format and update time
+        const timeOptions = {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        };
+        document.getElementById("time").textContent = now.toLocaleString(
+          "en-US",
+          timeOptions
+        );
+      }
+
+      setInterval(updateDateTime, 1000);
+      updateDateTime();
+    </script>
+  </body>
+</html>
