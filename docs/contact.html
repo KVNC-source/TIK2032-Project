@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
+    <title>Contact</title>
     <link
       rel="stylesheet"
-      href="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/style/style.css"
+      href="/TIK2032-Project/TIK2032-Project/style/style.css"
     />
   </head>
   <body>
@@ -33,27 +33,60 @@
         </div>
       </div>
     </nav>
-    <h1>GALLERY PAGE</h1>
+    <h1>CONTACT PAGE</h1>
 
-    <figure>
-      <img
-        src="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/asset/WhatsApp Image 2025-02-20 at 23.20.20_64db4e33.jpg"
-        alt="Keefa 1"
-        width="300"
-        height="500"
-      />
-      <figcaption>Keefa di MANTOS</figcaption>
-    </figure>
+    <div class="links">
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/keefalasut/" target="_blank">
+            <img
+              src="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/asset/instagram.png"
+              alt="Instagram"
+              width="40"
+              height="40"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/KeefaL32320" target="_blank">
+            <img
+              src="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/asset/twitter.png"
+              alt="Twitter"
+              width="40"
+              height="40"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/keefa lasut" target="_blank">
+            <img
+              src="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/asset/facebook.png"
+              alt="Facebook"
+              width="40"
+              height="40"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <figure>
-      <img
-        src="D:/SEM 4/Pengembangan Web/TIK2032-Project/TIK2032-Project/asset/WhatsApp Image 2025-03-03 at 18.20.34_a5b9a75f.jpg"
-        alt="Keefa 2"
-        width="400"
-        height="500"
-      />
-      <figcaption>Keefa di rumah</figcaption>
-    </figure>
+    <div class="contact-form">
+      <h2>Send Me a Message</h2>
+      <form action="#" method="post" onsubmit="showSuccessMessage(event)">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea
+        ><br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
     <script>
       // Check saved mode on page load
       window.onload = function () {
@@ -71,6 +104,18 @@
         } else {
           localStorage.removeItem("darkMode");
         }
+      }
+    </script>
+
+    <script>
+      function showSuccessMessage(event) {
+        event.preventDefault(); // Stop actual form submission (for demo/testing)
+
+        // Show alert
+        alert("Message successfully sent!");
+
+        // Optional: clear the form
+        document.querySelector(".contact-form form").reset();
       }
     </script>
 
