@@ -294,6 +294,18 @@ figure {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.figure video {
+  width: 100%; /* Make video responsive to the figure's width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Smooth corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for video */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.figure video:hover {
+  transform: scale(1.05); /* Slightly scale up the video on hover */
+}
+
 figure img {
   width: 100%;
   height: auto;
